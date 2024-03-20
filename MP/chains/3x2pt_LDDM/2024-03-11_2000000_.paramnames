@@ -1,0 +1,21 @@
+A_IA 	 A_{IA } 
+eta_IA 	 eta_{IA } 
+b_1 	 b_{1 } 
+b_2 	 b_{2 } 
+b_3 	 b_{3 } 
+b_4 	 b_{4 } 
+b_5 	 b_{5 } 
+b_6 	 b_{6 } 
+b_7 	 b_{7 } 
+b_8 	 b_{8 } 
+b_9 	 b_{9 } 
+b_10 	 b_{10 } 
+log10_Gamma 	 \mathrm{log}_{10}(\Gamma\times\mathrm{Gyr}) 
+log10_vk 	 \mathrm{log}_{10}(v_k\times\frac{\mathrm{s}}{\mathrm{km}}) 
+H0 	 H0 
+omega_b 	 10^{-2}\omega{}_{b } 
+omega_cdm 	 \omega{}_{cdm } 
+n_s 	 n_{s } 
+ln10^{10}A_s 	 ln10^{10}A_{s } 
+Omega_m 	 \Omega{}_{m } 
+sigma8 	 \sigma{}8 
