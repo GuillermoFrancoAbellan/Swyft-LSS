@@ -1,3 +1,4 @@
+# Taken from Fig. 4 in https://arxiv.org/abs/2307.03222
 -3.0         3.7
 -2.9         3.7
 -2.8         3.7
