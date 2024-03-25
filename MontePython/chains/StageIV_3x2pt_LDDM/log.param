@@ -1,0 +1,66 @@
+#------Experiments to test (separated with commas)-----
+
+data.experiments=['StageIV_3x2pt']
+
+#------ Parameter list -------
+# data.parameters[class name] = [mean, min, max, 1-sigma, scale, role]
+# - if min max irrelevant, put to -1 or None (if you want a boundary of -1, use -1.0)
+# - if fixed, put 1-sigma to 0
+# - if scale irrelevant, put to 1, otherwise to the appropriate factor
+# - role is either 'cosmo', 'nuisance' or 'derived'
+
+#Nuisance parameter list
+
+# we vary all nuisance parameters
+data.parameters['A_IA']      = [     1.72,  1.57104,  1.86896,   0.02483,  1, 'nuisance']
+data.parameters['eta_IA']    = [    -0.41, -0.56332, -0.25668,   0.02555,  1, 'nuisance']
+
+data.parameters['b_1']   = [ 1.09977,  1.08028, 1.11926,   0.00325,  1, 'nuisance']
+data.parameters['b_2']   = [ 1.22025,  1.20063, 1.23987,   0.00327,  1, 'nuisance']
+data.parameters['b_3']   = [ 1.27240,  1.25151, 1.29329,   0.00348,  1, 'nuisance']
+data.parameters['b_4']   = [ 1.31662,  1.29464,  1.3386,   0.00366,  1, 'nuisance']
+data.parameters['b_5']   = [ 1.35812,  1.33467, 1.38157,   0.00391,  1, 'nuisance']
+data.parameters['b_6']   = [ 1.39982,  1.37555, 1.42409,   0.00404,  1, 'nuisance']
+data.parameters['b_7']   = [ 1.44465,   1.4202,  1.4691,   0.00408,  1, 'nuisance']
+data.parameters['b_8']   = [ 1.4965,   1.47275, 1.52025,   0.00396,  1, 'nuisance']
+data.parameters['b_9']   = [ 1.56525,  1.54241, 1.58809,   0.00381,  1, 'nuisance']
+data.parameters['b_10']  = [ 1.74299,  1.70257, 1.78341,   0.00674,  1, 'nuisance']
+
+#Gamma and vk are treated as nuisance in our implementation of non-linear ddm
+data.parameters['log10_Gamma']  = [ -2.8,  -3, -1.2, 0.2,   1, 'nuisance']
+data.parameters['log10_vk']	= [  2.2,   2,  3.6, 0.2,   1, 'nuisance']
+
+# Cosmological parameters list
+
+data.parameters['H0']         	= [     67., 58.45966, 75.54034, 1.42339,     1, 'cosmo']
+data.parameters['omega_b'] 	    = [  2.2445,  1.07236,  3.41664, 0.19536,  0.01, 'cosmo']
+data.parameters['omega_cdm']    = [  0.1206,  0.09533,  0.14587, 0.00421,     1, 'cosmo']
+data.parameters['n_s']       	  = [    0.96,  0.93245,  0.98755, 0.00459,     1, 'cosmo']
+data.parameters['ln10^{10}A_s'] = [  3.0568,  2.92026,  3.19334, 0.02276,     1, 'cosmo']
+
+# Derived parameter list
+data.parameters['Omega_m']      = [       0,      -1,      -1,        0,     1, 'derived']
+data.parameters['sigma8']       = [       0,      -1,      -1,        0,     1, 'derived']
+
+# Other class parameters (fixed parameters, precision parameters, etc.)
+data.cosmo_arguments['sBBN file'] = data.path['cosmo']+'/external/bbn/sBBN_2017.dat'
+data.cosmo_arguments['tau_reio'] = 0.05
+
+data.cosmo_arguments['output'] = 'mPk'
+data.cosmo_arguments['non linear'] = 'halofit'
+
+# The base model features two massless
+# and one massive neutrino with m=0.06eV.
+# The settings below ensures that Neff=3.046
+# and m/omega = 93.14 eV
+data.cosmo_arguments['N_ur'] = 2.0328
+data.cosmo_arguments['N_ncdm'] = 1
+data.cosmo_arguments['m_ncdm'] = 0.06
+
+
+#------ Mcmc parameters ----
+# Number of steps taken, by default (overwritten by the -N command)
+data.N=10
+# Number of accepted steps before writing to file the chain. Larger means less
+# access to disc, but this is not so much time consuming.
+data.write_step=5

@@ -1,0 +1,12 @@
+# StageIV 3x2pt photometric likelihood
+# Adapted from a Cobaya likelihood by Matteo Martinelli
+
+# data directory and fiducial file
+StageIV_3x2pt.data_directory = data.path['data']
+
+#StageIV_3x2pt.fiducial_file  = "StageIV_3x2pt_fid_LCDM.npy"
+StageIV_3x2pt.fiducial_file  = "StageIV_3x2pt_fid_LDDM.npy"
+
+# nuisance parameters
+#StageIV_3x2pt.use_nuisance = ['A_IA','eta_IA','b_1','b_2','b_3','b_4','b_5','b_6','b_7','b_8','b_9','b_10']
+StageIV_3x2pt.use_nuisance = ['A_IA','eta_IA','b_1','b_2','b_3','b_4','b_5','b_6','b_7','b_8','b_9','b_10','log10_Gamma','log10_vk']
