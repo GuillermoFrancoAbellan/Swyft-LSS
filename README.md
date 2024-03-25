@@ -6,5 +6,5 @@ Additionally, the code relies on a few other packages:
 
 - **PyTorch** ([https://pypi.org/project/torch/](https://pypi.org/project/torch/) and **PyTorch Lightning** ([https://pypi.org/project/pytorch-lightning/](https://pypi.org/project/pytorch-lightning/)). These are anyway needed for the Swyft installation.
 - **Joblib** ([https://pypi.org/project/joblib/](https://pypi.org/project/joblib/)), in order to generate simulations in parallel.
-- **DMemu** ([https://github.com/jbucko/DMemu](https://github.com/jbucko/DMemu)), in order to model the effects of dark matter decays on the non-linear matter spectrum.
+- **DMemu** ([https://github.com/jbucko/DMemu](https://github.com/jbucko/DMemu)), in order to model the effects of dark matter decays on the non-linear matter power spectrum.
 - **GetDist** ([https://pypi.org/project/getdist/](https://pypi.org/project/getdist/)), to post-process the MCMC.  
