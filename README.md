@@ -5,13 +5,15 @@ This repository allows one to reproduce the results presented in "Fast likelihoo
 Additionally, the code relies on a few other packages:
 
 - **PyTorch** ([https://pypi.org/project/torch/](https://pypi.org/project/torch/)) and **PyTorch Lightning** ([https://pypi.org/project/pytorch-lightning/](https://pypi.org/project/pytorch-lightning/)). These are anyway needed for the Swyft installation.
-- **Joblib** ([https://pypi.org/project/joblib/](https://pypi.org/project/joblib/)), in order to generate simulations in parallel.
+- **Joblib** ([https://pypi.org/project/joblib/](https://pypi.org/project/joblib/)), in order to generate the Swyft simulations in parallel.
 - **DMemu** ([https://github.com/jbucko/DMemu](https://github.com/jbucko/DMemu)), in order to model the effects of dark matter decays on the non-linear matter power spectrum.
-- **GetDist** ([https://pypi.org/project/getdist/](https://pypi.org/project/getdist/)), to post-process the MCMC.
+- **GetDist** ([https://pypi.org/project/getdist/](https://pypi.org/project/getdist/)), to post-process the MCMC samples that we use as a reference. 
 
 We include three demostration Jupyter notebooks:
 
 - `Swyft_3x2pt_LCDM_cosmo_coverage.ipynb`. It performs inference of the cosmological parameters from a LCDM analysis of 3x2pt photometric probes. It also demonstrates an empirical coverage test.
 - `Swyft_3x2pt_LCDM_nuisance.ipynb`. It performs inference of the nuisance parameters from the same LCDM analysis considered in the previous notebook.
 - `Swyft_3x2pt_LDDM.ipynb`. It performs inference of the decaying dark matter parameters from a LDDM analysis of 3x2pt photometric probes.
+
+Moreover, we perform a Fisher analysis with the help of our forecast simulator in `Fisher/Swyft_3x2pt_LCDM_Fisher.ipynb`. Inside the folder named `MontePython` ([https://github.com/brinckmann/montepython_public](https://github.com/brinckmann/montepython_public)), we give information about the MCMC analysis, including likelihood, chains, mock data, etc. 
 
