@@ -1,6 +1,6 @@
 # Swyft-LSS
 
-This repository allows one to reproduce the results presented in "Fast likelihood-free inference in the LSS Stage IV era", [https://arxiv.org/abs/2403.14750](https://arxiv.org/abs/2403.14750). We mainly rely on **Swyft** ([https://github.com/undark-lab/swyft](https://github.com/undark-lab/swyft)) to perform parameter inference with Marginal Neural Ratio Estimation (**MNRE**), and the Boltzmann solver **CLASS** ([https://github.com/lesgourg/class_public](https://github.com/lesgourg/class_public)) to define our simulator of **Stage IV 3x2pt photometric probes**.
+This repository allows one to reproduce the results presented in "Fast likelihood-free inference in the LSS Stage IV era", [https://arxiv.org/abs/2403.14750](https://arxiv.org/abs/2403.14750). We mainly rely on **Swyft** ([https://github.com/undark-lab/swyft](https://github.com/undark-lab/swyft)) to perform parameter inference with Marginal Neural Ratio Estimation (**MNRE**), and the Boltzmann solver **CLASS** ([https://github.com/lesgourg/class_public](https://github.com/lesgourg/class_public)) to define our forecast simulator of **Stage IV 3x2pt photometric probes**.
 
 Additionally, the code relies on a few other packages:
 
@@ -9,4 +9,9 @@ Additionally, the code relies on a few other packages:
 - **DMemu** ([https://github.com/jbucko/DMemu](https://github.com/jbucko/DMemu)), in order to model the effects of dark matter decays on the non-linear matter power spectrum.
 - **GetDist** ([https://pypi.org/project/getdist/](https://pypi.org/project/getdist/)), to post-process the MCMC.
 
-We include three demostration Jupyter notebooks `Swyft_3x2pt_LCDM_cosmo_coverage.ipynb`, `Swyft_3x2pt_LCDM_nuisance.ipynb` and `Swyft_3x2pt_LDDM.ipynb`.
+We include three demostration Jupyter notebooks:
+
+- `Swyft_3x2pt_LCDM_cosmo_coverage.ipynb`. It performs inference of the cosmological parameters from a LCDM analysis of 3x2pt photometric probes. It also demonstrates an empirical coverage test.
+- `Swyft_3x2pt_LCDM_nuisance.ipynb`. It performs inference of the nuisance parameters from the same LCDM analysis considered in the previous notebook.
+- `Swyft_3x2pt_LDDM.ipynb`. It performs inference of the decaying dark matter parameters from a LDDM analysis of 3x2pt photometric probes.
+
