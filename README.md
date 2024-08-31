@@ -1,6 +1,6 @@
 # Swyft-LSS
 
-![alt text](https://github.com/GuillermoFrancoAbellan/Swyft-LSS/blob/main/Aux_files/diagram_network.pdf?raw=true)
+![alt text](https://github.com/GuillermoFrancoAbellan/Swyft-LSS/blob/main/Aux_files/diagram_network.jpeg?raw=true)
 
 
 This repository allows one to reproduce the results presented in "Fast likelihood-free inference in the LSS Stage IV era", [https://arxiv.org/abs/2403.14750](https://arxiv.org/abs/2403.14750). We mainly rely on **Swyft** ([https://github.com/undark-lab/swyft](https://github.com/undark-lab/swyft)) to perform parameter inference with Marginal Neural Ratio Estimation (**MNRE**), and the Boltzmann solver **CLASS** ([https://github.com/lesgourg/class_public](https://github.com/lesgourg/class_public)) to define our forecast simulator of **Stage IV 3x2pt photometric probes**.
